@@ -6,8 +6,13 @@ class MyComponent extends React.Component {
         age: '21'
     };
 
-    handleClick = () => {
+
+    handleClick(event) {
         console.log('name: ', this.state.name);
+
+        this.setState({
+            name: 'hhhaaa'
+        })
     }
 
     render() {
@@ -15,7 +20,7 @@ class MyComponent extends React.Component {
             <div>
                 My First Component
                 name: {this.state.name}
-                <button onClick={this.handleClick}>click me</button>
+                <button onClick={(event) => { this.handleClick(event) }}>click me</button>
             </div>
 
         );
