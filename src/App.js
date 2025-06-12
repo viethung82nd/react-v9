@@ -7,21 +7,17 @@ import React from 'react';
 
 class App extends React.Component {
 
-  state = {
-    name: 'hung',
-    age: '21'
-  };
 
   render() {
     return (
       <div>
         <MyComponent></MyComponent>
-        name: {this.state.name}
-      </div>
 
+      </div>
     );
   }
 }
+
 
 
 // const App = () => {
