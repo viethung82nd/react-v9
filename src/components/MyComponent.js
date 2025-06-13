@@ -1,36 +1,19 @@
 import React from "react";
+import UserInfo from "./UserInfo";
+import DisplayInfor from "./DisplayInfor";
 
 class MyComponent extends React.Component {
-    state = {
-        name: 'hung',
-        age: '21'
-    };
 
-
-    handleOnChange = (event) => {
-        this.setState({
-            name: event.target.value,
-            age: 89
-        });
-    }
-
-    handleOnSubmit = (event) => {
-        event.preventDefault();
-        console.log(this.state);
-    }
 
     render() {
+        const age = 50;
+        const myInfor = ['a', 'b', 'v']
         return (
             <div>
-                My First Component
-                name: {this.state.name},
-                age: {this.state.age}
-                <form onSubmit={(event) => this.handleOnSubmit(event)}>
-                    <input type="text"
-                        onChange={(event) => this.handleOnChange(event)}
-                    ></input>
-                    <button>submit</button>
-                </form>
+                <UserInfo></UserInfo>
+                <br></br>
+                <br></br>
+                <DisplayInfor name='hung' age={age} myInfor={myInfor}></DisplayInfor>
             </div>
 
         );
